@@ -1,0 +1,1 @@
+web: gunicorn Gov_Evaluation:app --bind 0.0.0.0:$PORT
