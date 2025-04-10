@@ -4,7 +4,7 @@ ibm-aigov-facts-client
 ibm-watson-openscale
 ibm-watsonx-ai
 matplotlib
-pydantic==1.10.11
+pydantic
 pyopenssl
 sacrebleu
 sacremoses
