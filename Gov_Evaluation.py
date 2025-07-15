@@ -192,9 +192,12 @@ def get_wos_client(api_key, iam_url, service_url, service_instance_id):
     
     authenticator = IAMAuthenticator(
         apikey=api_key,
-        url=iam_url
+        url=iam_url,
+        disable_ssl_verification=True
     )
-
+    import certifi,os
+    os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
+    
     wos_client = APIClient(
         authenticator=authenticator,
         service_url=service_url,
