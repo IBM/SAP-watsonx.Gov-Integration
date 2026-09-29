@@ -367,7 +367,8 @@ def evaluate():
         return jsonify(latest_record), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        app.logger.error(f"Error during evaluation: {e}", exc_info=True)
+        return jsonify({"error": "An internal error occurred during evaluation."}), 500
     
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))  # Default to 5000 for local dev
