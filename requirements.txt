@@ -1,4 +1,4 @@
-datasets==2.10.0
+datasets==5.0.1
 evaluate
 ibm-aigov-facts-client
 ibm-watson-openscale
